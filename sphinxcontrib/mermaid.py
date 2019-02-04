@@ -276,7 +276,7 @@ def html_visit_mermaid(self, node):
 
 def render_mm_latex(self, node, code, options, prefix='mermaid'):
     try:
-        fname, outfn = render_mm(self, code, options, 'pdf', prefix)
+        fname, outfn = render_mm(self, code, options, 'svg', prefix)
     except MermaidError as exc:
         self.builder.warn('mm code %r: ' % code + str(exc))
         raise nodes.SkipNode
